@@ -5,8 +5,171 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LASR_Save_Editor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="800" MinWidth="800" MinHeight="600" MaxWidth="800" MaxHeight="600">
+    <Border Padding="5px" Background="AliceBlue">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Grid.Column="0" Width="Auto">
+                <Border DockPanel.Dock="Top" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1">
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" >Samochód</TextBlock>
+                    <TextBlock Grid.Column="1" Margin="0,0,12,0" >Dej</TextBlock>
+                    <TextBlock Grid.Column="2" Margin="0,0,20,0">Wide</TextBlock>
+                </Grid>
+                </Border>
+                <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1,0,1,1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-    </Grid>
+                            <Image Grid.Column="0" Source="/img/Model_Hatch_S2.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                            <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="15"/>
+                            <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0" Source="/img/Model_Hatch_Trend.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                                <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Hatch_CycloneR.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Sedan_DesertS.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Coupe_RS.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Coupe_SD_T5.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Coupe_TornadoR.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                            <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="/img/Model_Coupe_ZX.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                        <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                        <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                        </Border>
+                            <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0" Source="/img/Model_Sedan_Wega.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                                    <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0" Source="/img/Model_Sedan_MX.png" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"></Image>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Nazwa</TextBlock>
+                                <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                </ScrollViewer>
+                </Border>
+            </DockPanel>
+        </Grid>
+    </Border>
 </Window>
