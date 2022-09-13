@@ -27,7 +27,7 @@
                 </Border>
                 <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1,0,1,1">
                 <ScrollViewer>
-                    <StackPanel>
+                    <!--<StackPanel>
                         <Border BorderBrush="Gray" BorderThickness="0,0,1,1">
                             <Grid>
                             <Grid.ColumnDefinitions>
@@ -166,7 +166,34 @@
                                 <CheckBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                 <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </Grid>
-                        </StackPanel>
+                        </StackPanel>-->
+                        <ListView ItemsSource="{Binding Garage}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                    <Setter Property="Margin" Value="0"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="Gray" BorderThickness="1,1,1,1">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="4*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Grid.Column="0" Source="{Binding ImgSource}" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"/>
+                                            <TextBlock Grid.Column="0"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Name}"/>
+                                            <CheckBox Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding IsOwned}"/>
+                                            <CheckBox Grid.Column="2" VerticalAlignment="Center" IsEnabled="{Binding IsOwned}" IsChecked="{Binding IsWidebody}"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                 </ScrollViewer>
                 </Border>
             </DockPanel>

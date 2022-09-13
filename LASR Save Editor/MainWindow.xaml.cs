@@ -22,6 +22,7 @@ namespace LASR_Save_Editor
     {
         public MainWindow()
         {
+            this.DataContext = new viewModel.mainVM();
             InitializeComponent();
         }
     }
