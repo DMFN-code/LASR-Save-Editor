@@ -9,54 +9,63 @@
     <Border Padding="5px" Background="AliceBlue">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="263px"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <DockPanel Grid.Column="0" Width="Auto">
-                <Border DockPanel.Dock="Top" Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1">
-                <Grid DockPanel.Dock="Top">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition ></ColumnDefinition>
-                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" >Samochód</TextBlock>
-                    <TextBlock Grid.Column="1" Margin="0,0,12,0" >Dej</TextBlock>
-                    <TextBlock Grid.Column="2" Margin="0,0,20,0">Wide</TextBlock>
-                </Grid>
-                </Border>
-                <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1,0,1,1">
-                    <ScrollViewer>
-                        <ListView ItemsSource="{Binding Garage}">
-                            <ListView.ItemContainerStyle>
-                                <Style TargetType="ListViewItem">
-                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
-                                    <Setter Property="Margin" Value="0"/>
-                                    <Setter Property="Padding" Value="0"/>
-                                </Style>
-                            </ListView.ItemContainerStyle>
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Border BorderBrush="Gray" BorderThickness="1,1,1,1">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="4*"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
+            <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1,0,1,1">
+                <ListView ItemsSource="{Binding Garage}" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="False">
+                            <GridViewColumn  Header="Car" Width="150px">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Image Source="{Binding ImgSource}" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"/>
+                                            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Name}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Give"  Width="45px">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsOwned}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Wide" Width="45px">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox VerticalAlignment="Center" IsEnabled="{Binding IsOwned}" IsChecked="{Binding IsWidebody}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="Padding" Value="0"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="Gray" BorderThickness="1,1,1,1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                            <Image Grid.Column="0" Source="{Binding ImgSource}" Stretch="Fill" Width="150px" Height="80px" HorizontalAlignment="Center" Margin="-5,0,0,5"/>
-                                            <TextBlock Grid.Column="0"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Name}"/>
-                                            <CheckBox Grid.Column="1" VerticalAlignment="Center" IsChecked="{Binding IsOwned}"/>
-                                            <CheckBox Grid.Column="2" VerticalAlignment="Center" IsEnabled="{Binding IsOwned}" IsChecked="{Binding IsWidebody}"/>
-                                        </Grid>
-                                    </Border>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                </ScrollViewer>
-                </Border>
-            </DockPanel>
+
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
         </Grid>
     </Border>
 </Window>
